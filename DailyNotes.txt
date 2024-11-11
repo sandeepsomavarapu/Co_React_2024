@@ -1,0 +1,58 @@
+HTML:
+
+	TIM BERNERS LEE
+	
+	HTML 5
+	
+	
+	
+W3schools
+
+
+table
+	tr,th,td,thead,tbody..
+
+
+Form tags
+
+
+<form>
+	Username :<input type="text"
+
+</form>
+
+IDE
+
+CSS:
+====
+	CSS3-->STYLE
+	
+	 3 WAYS
+		1.INLINE		-->OPEN TAG style="propname:propvalue;..."
+		2.INTERNAL		--><head><style>......</style>
+		3.EXTERNAL
+
+
+		internal--->selector{proname1:value;propname2:value;....}
+		
+		element selector	h1	
+		group selector		h1,h3,h3
+		all selector		*
+		id selector			#idname		unique
+		class selector		.classname
+		
+		h1,p{proname1:value;propname2:value;....}
+		
+		EXTERNAL-->sandeepstyles.css
+		
+		
+		Bootstrap-->.css-->twitter
+		
+		
+		CDN LINK
+		
+JAVASCRIPT
+
+REACT
+		
+		
