@@ -51,8 +51,137 @@ CSS:
 		
 		CDN LINK
 		
-JAVASCRIPT
+JAVASCRIPT:
+===========
+		brenden eich 1995 
+		
+		Livescript--javascript
+		
+		ECMASCRIPT2015
+		ES6
 
-REACT
+scripting language
+
+interactive web pages
+front end validations
+can change html content/style
+
+
+	1)inline		< ....>
+	2)internal		<head><body><script>
+	3)extrernal		myfunctions.js
+	
+
+variable:
+name of a memory location
+
+	let,const,var
+	
+	identifier
+	
+		a-z
+		A-Z
+		0-9
+		$
+		_
+	
+	var ename1="sandeep"
+	
+	
+	Datatypes
+	
+		eid			
+		ename	dasdasd
+		sal	
+		add		
+		contact	9999999
+		.....
+	
+	primitive DT	 one value
+		number
+		String
+		boolean
 		
+	Composite DT	multi value
+		array
+		object...
+
+	
+		null
+		undefined
+NOTE:Browser can understand only JAVASCRIPT
+
+	typescript
+	react	-->jsx compiler/transpiler
+	angular....TS
+
+
+
+functions
+
+		function add(a,b)
+		{
+		alert(a+b)
+		}
+	add(2,3)
+
+
+ES6 features
+
+arrays
+object
+validations
+
+html-->static web pages
+css-->style
+js-->dynamic/interactive web pages 
+
+REACT=html+css+js
 		
+	library		react			react.js
+	
+	framework	angular
+	
+	
+	DOM
+	Virtual DOM
+	
+		jorden walke
+		 2013
+		 
+		 <script>
+		 
+		 
+		 </script>
+		 
+		 18.2
+		 simplicity-->JSX
+		 virtual DOM	-->DOM
+		 
+REACT		 
+			node js
+			npm-->node package manager 
+			
+			npm install -g packagename
+			npm install -g create-react-app
+			
+			
+C:\Users\SomavarapuSandeep>node -v
+v22.11.0
+
+C:\Users\SomavarapuSandeep>npm -v
+10.9.0
+
+C:\Users\SomavarapuSandeep>npm install -g create-react-app
+
+to create project:
+CLI
+create-react-app projectname
+
+	create-react-app demoapp
+	
+	cd demoapp
+	
+	npm start		
+	
+	https://survey.zohopublic.com/zs/xjCldg
