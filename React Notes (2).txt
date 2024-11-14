@@ -1,0 +1,882 @@
+React:
+====== UI  18.x
+
+MVC--->view  jordan walke 2011
+ 
+		Facebook-->META
+virtual DOM:
+=============	
+	many JavaScript frameworks are available in the market(like angular, node), 
+	but still, React came into the market and gained popularity amongst them.
+	The previous frameworks follow the traditional data flow structure, 
+	which uses the DOM (Document Object Model).
+	DOM is an object which is created by the browser each time a web page is 
+	loaded. 
+	It dynamically adds or removes the data at the back end and when 
+	any modifications were done, then each time a new DOM is created for 
+	the same page. This repeated creation of DOM makes unnecessary memory 
+	wastage and reduces the performance of the application.
+	
+	ReactJS still used the same traditional data flow, but it is not directly 
+	operating on the browser's Document Object Model (DOM) immediately; 
+	instead, it operates on a virtual DOM.
+	It means rather than manipulating the document in a browser after changes to 
+	our data, it resolves changes on a DOM built and run entirely in memory. 
+	After the virtual DOM has been updated, React determines what changes made 
+	to the actual browser's DOM. 
+	The React Virtual DOM exists entirely in memory and is a representation 
+	of the web browser's DOM. Due to this, when we write a React component,
+	we did not write directly to the DOM;
+	
+	instead, we are writing virtual components that react will turn into the DOM.
+	
+	...
+	A virtual DOM object is a representation of the original DOM object. 
+	It works like a one-way data binding. 
+	Whenever any modifications happen in the web application, the entire UI 
+	is re-rendered in virtual DOM representation. 
+	Then it checks the difference between the previous DOM representation and
+	new DOM. Once it has done, the real DOM will update only the things 
+	that have actually changed. This makes the application faster, and 
+	there is no wastage of memory.
+WEBPACK:
+=========
+Webpack is used for module packaging, development, and production pipeline 
+automation. We will use webpack-dev-server during development,
+webpack to create production builds, and webpack CLI provides a set of commands.
+
+Babel:
+======
+
+Babel is a JavaScript compiler and transpiler used to convert one source code to
+others. It compiles React JSX and ES6 to ES5 JavaScript which can be run on 
+all browsers 
+		
+JSX
+Components
+One-way Data Binding
+Virtual DOM
+Simplicity
+Performance
+		JSX  	.jsx/js
+
+
+	NPM -->install node packages
+	
+	node -v
+	npm -v
+	npm install -g typescript
+	npm install -g @angular/cli
+	
+	npm install -g create-react-app
+	npm uninstall -g create-react-app
+	
+	npm view react version
+	
+		npm install -g create-react-app
+		create-react-app projectname
+		
+	npx-->npx create-react-app demo
+	
+	ctrl + ~(tild)
+	
+	create-react-app projectname
+
+			webpack,babel(translator)
+Explore the project structure.
+
+package.json - The package.json file contains all the required dependencies for our React JS project. 
+Most importantly, you can check the current version of the Reatains index.html. As react ict that you are using. It has all the scripts to start, build, and eject our React app.
+public folder - The public folder cons used to build a single page application, we have this single HTML file to render all our components. Basically, it's an HTML template. It has a div element with id as root and all our components are rendered in this div with index.html as a single page for the complete react app.
+src folder- In this folder, we have all the global javascript and CSS files. All the different components that we will be building, sit here.
+index.js - This is the top renderer of your react app. 
+node_modules - All the packages installed by NPM or Yarn will reside inside the node_modules folder.
+App.js - The App.js file contains the definition of our App component which actually gets rendered in the browser and this is the root component.
+			
+	 // If you want to start measuring performance in your app, pass a function
+ // to log results (for example: reportWebVitals(console.log))
+ // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+	
+	server--->3000
+	
+	npm start-->to start server with by default port 3000
+	
+	package.json
+	
+	 "scripts": {
+    "start": "set PORT=3006 && react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  }
+  
+  or
+  
+  .env 
+  PORT=1234
+  
+Project Structure:
+====================  
+  package.json(nodejs)
+		 
+		 It comprises human-readable and functional information about the project, 
+		 such as the project name and description, the package version number, and a list of 
+		 dependencies needed by the application
+		 
+  package-lock.json 
+  
+		The package-lock.json is a lockfile that holds information on the dependencies or packages
+		installed for a node.js project, including their exact version numbers. 
+  Web Vitals
+		Based on CRA docs, CRA uses web-vital library for measuring web performance.
+		(for measuring site experience on Google).
+		Web vitals are a set of useful metrics that aim to capture the user experience of a web page.		
+  In React, setupTests.js and app.test.js are both related to testing, but they serve different purposes:
+
+setupTests.js:
+
+- This file is used to setup the testing environment.
+- It's typically used to configure the testing framework, such as Jest.
+- It's run before any tests are executed.
+- It's usually used to define global variables, mocks, or other test-related configurations.
+
+app.test.js:
+
+- This file contains the actual tests for your React application.
+- It's where you write test cases to verify the behavior of your components, functions, or other code.
+- It's run after the testing environment has been set up by setupTests.js.
+- It's usually used to test specific components, functionality, or user interactions.
+
+In summary, setupTests.js prepares the testing environment, while app.test.js contains the tests themselves.
+ 
+  
+	component-->app-->root component			class Login extends React.Component
+	building block of react app
+
+	reusability
+	
+	1.Functional component	//state less component props -->immuttable
+
+	2.class component   	//statefull component class Hello extends React.Component
+	
+			
+	
+JSX				class A --->function B -->state-->muttable`
+	
+	
+	<div>
+	
+			React.createElement("div","className","")
+	
+	
+				/*  bbbbbbb */
+				
+				BABEL---->CONVERTED JS CODE ....
+
+https://infoheap.com/online-react-jsx-to-javascript/
+
+
+
+event.preventDefault():
+=========================
+In React, the preventDefault() function is used to prevent the default behavior of an event 
+from occurring. It's often used in event handler functions, such as those attached to form 
+submission or link clicks.
+
+When you call preventDefault() on an event object, it cancels the default action associated
+ with that event. For example:
+
+- Submitting a form: Prevents the form from submitting and reloading the page.
+- Clicking a link: Prevents the link from navigating to a new page.
+- Pressing a key: Prevents the default action associated with that key press (e.g., submitting a form).
+
+By preventing the default behavior, you can:
+
+- Handle the event programmatically.
+- Perform custom logic or validation.
+- Prevent unwanted side effects (e.g., page reloads).
+- Create custom interactions or overrides.
+
+Example:
+=======
+jsx
+import React from 'react';
+
+const handleSubmit = (event) => {
+  event.preventDefault(); // Prevent form submission
+  // Perform custom logic or validation here
+};
+
+return (
+  <form onSubmit={handleSubmit}>
+    {/* Form content */}
+  </form>
+);
+
+In summary, preventDefault() gives you control over the event's behavior, allowing you to customize or override the default action.
+
+
+Exports In React:
+=================
+
+Named Exports:
+
+components/Header.js
+
+jsx
+export const Header = () => <h1>Hello</h1>;
+export const Footer = () => <p>Bye!</p>;
+
+App.js
+
+jsx
+import { Header, Footer } from './components/Header';
+
+const App = () => {
+  return (
+    <>
+      <Header />
+      <Footer />
+    </>
+  );
+};
+
+Default Exports:
+
+components/Container.js
+
+jsx
+export default () => <div>Hello World!</div>;
+
+App.js
+
+jsx
+import Container from './components/Container';
+
+const App = () => {
+  return <Container />;
+};
+
+In the named exports example, we export two separate components (Header and Footer) from the same module (Header.js). We then import them specifically by their names in App.js.
+
+In the default exports example, we export a single component (Container) as the default export from the Container.js module. We then import it in App.js without specifying a name, as it's the default export.
+
+
+
+
+
+
+
+
+stateless/functional component
+
+
+statefull/class component
+
+
+this.state
+setState
+getIntialState
+
+
+state-->muttable
+props-->imuttable
+Difference upto 16.x version
+	Class Component			Functional Component 
+	
+State:								props
+state is container which 		container which holds some data related to component
+can hold some data related
+to component					
+
+statefull component			   stateless component
+
+state is muttable				props are imuttable
+
+								props are by default readonly
+this.state,setState
+this.props
+
+
+Vscode-->extensions-->download this...
+
+
+npm install --save bootstrap
+
+
+
+import "bootstrap/dist/css/bootstrap.min.css"
+
+ES7+ React/Redux/React-Native snippets
+
+Few Shortcuts:
+===============
+rcc-->for class component
+rce-->class component with default export
+rfc-->for funational component
+rfce-->functional component with default export
+rafce-->for arrow functional component
+rcons-->to create constructor with default state
+rpce-->to create pure class components
+
+npm i prop-types --save
+
+
+
+
+
+npm install -g react-router-dom --save
+
+
+
+forms:
+======
+	1)UNCONTROLLED COMPONENT		
+	2)CONTROLLED COMPONENT			
+
+
+React.createRef
+
+<form>
+
+	<input ref
+
+	onsubmit validation
+
+
+	axio -->http-->get,put,post,delete
+	
+	httpclient
+	
+	npm install axio
+	
+spring.datasource.url=jdbc:mysql://localhost:3306/employee_management_system?useSSL=false
+spring.datasource.username=root
+spring.datasource.password=rpsconsulting
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+server.port=1234
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQLDialect
+
+spring.jpa.hibernate.ddl-auto = create
+
+names=['suresh','mahesh','rajesh']
+			{/* <h2>{names[0]}</h2>
+            <h2>{names[1]}</h2>
+            <h2>{names[2]}</h2> */}
+
+            {
+                names.map(name=><h2>{name}</h2>)
+            }
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+function Timer() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setCount((count) => count + 1);
+    }, 1000);
+  });
+
+  return <h1>I've rendered {count} times!</h1>;
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Timer />)
+			
+		
+			
+function Timer() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setCount((count) => count + 1);
+    }, 1000);
+  }, []); // <- add empty brackets here
+
+  return <h1>I've rendered {count} times!</h1>;
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Timer />);
+			
+			npm install react-redux
+			
+			
+			
+	Life Cycle methods:
+=========================	
+			
+			
+			1)intialization :constructor
+			
+			2)mounting
+			
+			3)Updating
+			
+			4)Unmounting
+			
+			
+	class Test extends Component
+	{
+	constructor(props){
+	super(props)
+	
+	this.state={name:""}
+	}	
+		}	
+			
+	Mounting phase:
+===================
+
+			componentWillMount --->will get called just before component is about to mount into the DOM
+			componentDidMount --->invoked just after the component insrted into DOM and render function execute
+			
+			
+	updating phase:
+===================	
+		
+		componentWillReceiveProps:invoked when the component receiving new props
+		shouldcomponentUpdate:invoked when component receiving new props ..boolean -->true
+		componentWillUpdate 
+		componentDidUpdate
+
+Unmounting phase
+
+	componentWillUnmount
+
+state
+
+props
+
+Higher Order Component:
+======================
+
+HOC-->is a pattern where a function takes a component as an argument
+and return a new component
+
+syntax: const NewComponent=higherOrderComponent(originalComponent)
+
+syntax: const enahancedComponent=higherOrderComponent(originalComponent)
+it ads additional functionality to orginal component
+
+
+
+useState
+
+useEffect(callback,[])
+	useEffect is a tool that lets us interact with the outside world but not affect 
+	the rendering or performance of the component that it's in.
+
+			useState()--->react
+
+  Execute the following command to install JSON server
+npm install -g json-server
+
+Execute the following command to start the server
+json-server --watch filename.json
+
+json-server --watch data.json --port 8000
+			
+
+There are plenty of libraries available to make HTTP calls into React app.
+
+Axios			--->get,post,put,delete
+Fetch
+Superagent
+React-axios
+Use-HTTP
+React-request			
+			
+npm install axios
+
+
+Routing
+========:
+
+npm install react-router-dom --save   
+
+npm install react-router-dom
+
+
+
+Key Concepts:
+=============
+
+Route: A route is a mapping between a URL and a component. 
+When a user visits a specific URL, React Router renders the corresponding component.
+
+Router: The router is the top-level component that provides the routing infrastructure. 
+In React Router, you typically use BrowserRouter for web applications and HashRouter 
+for static sites.
+
+Nested Routes: React Router allows you to nest routes, creating a hierarchy of 
+components. This is especially useful for layout structures.
+
+Link: The Link component enables navigation by creating anchor-like elements that 
+maintain the application's state.
+
+
+
+ <BrowserRouter>
+     <App />
+ </BrowserRouter>
+
+
+
+import { Link } from "react-router-dom";
+
+ const Navbar = () => {
+   return (
+     <nav>
+       <ul>
+         <li>
+           <Link to="/">Home</Link>
+         </li>
+         <li>
+           <Link to="/about">About</Link>
+         </li>
+         <li>
+           <Link to="/contact">Contact</Link>
+         </li>
+       </ul>
+     </nav>
+   );
+ }
+
+ export default Navbar
+ 
+ 
+  //Home.js
+ import React from 'react'
+ import Navbar from './Navbar'
+
+ const Home = () => {
+   return (
+     <div>
+         <Navbar />
+         <h1>Home</h1>
+     </div>
+   )
+ }
+
+ export default Home
+ 
+ 
+ //About.js
+ import React from 'react'
+ import Navbar from './Navbar'
+
+ const About = () => {
+   return (
+     <div>
+         <Navbar />
+         <h1>About</h1>
+     </div>
+   )
+ }
+
+ export default About
+ 
+ 
+  //Contact.js
+ import React from 'react'
+ import Navbar from './Navbar'
+
+ const Contact = () => {
+   return (
+     <div>
+         <Navbar />
+         <h1>Contact</h1>
+     </div>
+   )
+ }
+
+ export default Contact
+ 
+ 
+ 
+ //App.js
+ import { Route, Routes } from 'react-router-dom';
+ import './App.css';
+ import Home from './Home';
+ import About from './About';
+ import Contact from './Contact';
+
+ function App() {
+   return (
+      <div className="App">
+       <Routes>
+         <Route path='/' element={<Home/>} />
+         <Route path='/about' element={<About/>} />
+         <Route path='/contact' element={<Contact/>} />
+       </Routes>
+     </div>
+   );
+ }
+
+ export default App;
+
+
+import React, { Fragment } from "react";
+import "./index.css"
+
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+export default function App() {
+  return (
+   <Router>
+    <main>
+      <nav>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
+        </ul>
+      </nav>
+
+    <Route path="/" exact component={Home} />
+    <Route path="/about"  component={About} />
+    <Route path="/contact"  component={Contact} />
+
+    </main>
+</Router>
+  );
+}
+
+const Home = () => (
+  <Fragment>
+    <h1>Home</h1>
+    <FakeText />
+  </Fragment>
+  );
+
+const About = () => (
+  <Fragment>
+    <h1>About</h1>
+    <FakeText />
+  </Fragment>
+  );
+
+const Contact = () => (
+  <Fragment>
+    <h1>Contact</h1>
+    <FakeText />
+  </Fragment>
+  );
+
+
+ShoppingApp
+=============
+
+			
+contextapi
+
+	1)create the context		-->const UserContext=React.createContext()
+										
+	2)provide the context				Provider
+	
+	3)consume the context value			Consumer
+
+common data to root/parent/top
+
+1)callbacks
+
+2)contextapi	useContext
+
+3)redux
+
+			npm install react-redux
+			
+actions: these are objects that should have two properties, one describing the type
+ of action, and one describing what should be changed in the app state.
+ 
+reducers: these are functions that implement the behavior of the actions. 
+They change the state of the app, based on the action description and the state 
+change description.
+
+store: it brings the actions and reducers together, holding and changing the state 
+for the whole app — there is only one store.	
+			
+
+
+Redux:
+========
+
+	npm install react-redux
+	
+Redux is made up of actions,reducers,state and the store Each thing does 
+one specific task
+
+Redux is a pattern and library for managing and updating application state,
+ using events called "actions"
+ 
+ 
+Redux is a predictable state container for javascript apps.
+
+	it is not tied for react 
+	
+	can be used with react,angular,vue,even vanila JS
+	
+	it is a library for javascript apps
+	
+Redux store the state of an application.
+
+
+UserComponent
+
+state={
+username:"",
+password:"",
+submitting:false
+
+}
+Redux will store and manage the application state.
+
+
+but why redux?
+
+component has state 
+
+react is ui library
+
+redux state management library
+
+these both work independently
+
+react-redux package is official redux ui binding library
+
+react-redux provides set of functions which will help you to connect  react app to redux
+
+	Store:A Store that holds the state of an application
+	Action:An Action describes the changes in the state of the application
+	Reducer:A Reducer which actually carries out the state transition dependening
+	on the action
+
+
+
+	Actions:
+	the only way our app can interact with the store
+	it carries some info from your app  to the redux store
+	plain javascript objects
+	have a type property that indicates the type of action being performed 
+	the 'type' string constant
+	
+Redux: It allows React components to read data from a Redux Store, 
+and dispatch Actions to the Store to update data
+
+
+
+
+
+
+
+Forms:
+======
+Controlled Components: In this approach, form data is handled by React through the 
+use of hooks like useState hook.
+
+Uncontrolled Components: Form data is handled by the Document Object Model (DOM) 
+rather than by React. The DOM maintains the state of form data and updates 
+it based on user input.
+ 
+ 
+ 
+
+Some popular form libraries include:
+
+Formik
+Redux Form
+React Hook Form
+Yup.
+
+
+npm install react-hook-form
+
+
+The useForm hook provides several functions and properties that you can use to manage your form:
+
+register: This function is used to register form fields with React Hook Form.
+
+handleSubmit: This is used to handle form submissions.
+It takes a callback function that is called when the form is submitted.
+
+errors: This represents an object containing any validation errors that occur 
+when a form is submitted.
+
+watch: This function is used to watch for changes to specific form fields. 
+It takes an array of form field names and returns the current value of those fields.
+			
+		Best Practices:
+use functional components(arrow functions)		
+			
+dont use inline css
+
+import
+		third party imports
+		
+		internal imports 
+		
+formatting ctrl+k ctrl+f		
+
+ES7+ React/Redux/React-Native snippets  v4.4.
+			
+			
+			
+Jest:
+=====
+			
+	Jest is a well-liked testing tool that makes it simple to test JavaScript apps
+	particularly those created using JavaScript-based frameworks like React. 		
+						
+			Zero Configuration
+			
+			
+			npm install react-test-renderer
+Key Points:
+============			
+			
+it or test: describes the test itself. It takes as parameters the name of the test
+		and a function that holds the tests.
+
+expect: the condition that the test needs to pass. It will compare the received
+ parameter to a matcher.
+
+a matcher: a function that is applied to the expected condition.
+
+render: the method used to render a given component.	
+			
+			
+TestEvents.js
+		
+import React from 'react'
+
+const TestEvents = () => {
+  const [counter, setCounter] = React.useState(0)
+  
+return (
+  <>
+    <h1 data-testid="counter">{ counter }</h1>
+    <button data-testid="button-up" onClick={() => setCounter(counter + 1)}> Up</button>
+    <button data-testid="button-down" onClick={() => setCounter(counter - 1)}>Down</button>
+ </>
+    )
+  }
+  
+  export default TestEvents
+			
+			
+			
+			
+			
+			
+			

@@ -158,12 +158,19 @@ REACT=html+css+js
 		 simplicity-->JSX
 		 virtual DOM	-->DOM
 		 
+		 visual studio code
+			
+			node js(npm)
+			
 REACT		 
 			node js
 			npm-->node package manager 
 			
-			npm install -g packagename
+			cmd-->npm install -g packagename
 			npm install -g create-react-app
+			
+			
+			
 			
 			
 C:\Users\SomavarapuSandeep>node -v
@@ -174,6 +181,16 @@ C:\Users\SomavarapuSandeep>npm -v
 
 C:\Users\SomavarapuSandeep>npm install -g create-react-app
 
+	npm view react version 18.x
+	
+	
+	MVC-->VIEW
+	
+	VDOM
+	JSX
+	Performance
+	
+
 to create project:
 CLI
 create-react-app projectname
@@ -182,6 +199,32 @@ create-react-app projectname
 	
 	cd demoapp
 	
-	npm start		
+	npm start		3000	
 	
-	https://survey.zohopublic.com/zs/xjCldg
+Components:
+===========
+		2 types components
+		
+		1)functional components  /stateless components (props)-->immutable
+		2)class components		/statefull components...state-->muttable
+	
+	class Test extends React.Component{
+	
+	
+	}
+	
+	index.html--><div id="root">
+	index.js
+	App.js
+	
+	Arrow functions
+	
+	
+	function demo(){
+	
+	
+	
+	}
+	
+	demo=()=>{}
+	
