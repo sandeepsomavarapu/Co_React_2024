@@ -228,3 +228,50 @@ Components:
 	
 	demo=()=>{}
 	
+	
+	Class Components			class Test extends Component--react
+	Functional Components		function
+	
+		state   	props-->container
+		muttable	imuttable
+		
+		events-->camelcase
+		{}
+		class -->functions-->bind
+		
+		form
+		
+			Controlled 	form   event  react    onchange--->setState
+			Uncontrolled form  ref		DOM  ref
+		
+		
+		
+		Asynchronous
+		Synchronous
+		
+		
+		callbackfunction
+		
+		
+		function m1()
+		{
+		
+		m2()
+		}
+		
+		function m2()
+		{
+		
+		
+		}
+		m1()
+		
+	m2=()=>{}
+	
+	arrays.map(callbackfunction)
+	
+	
+	conditional rendering
+	
+			if else
+			
