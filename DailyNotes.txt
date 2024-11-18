@@ -275,3 +275,69 @@ Components:
 	
 			if else
 			
+			
+			Product CRUD
+			
+			display products info
+			 Delete 
+			
+			Employee CRUD
+			
+			
+			
+			HOOKS
+			
+			router
+			
+			bootstrap
+			
+			
+			
+			
+			==
+			
+			let x="10"
+			let y=10
+			
+			console.log(x==y) true
+			
+			
+			===
+			
+			let x="10"
+			let y=10
+			
+			console.log(x===y) false
+			
+
+Component Life Cycle Methods:
+============================			
+			constructor
+			
+			class component
+			
+			phases ---4
+			
+			intialization constructor()
+			mounting		willmount,didmount
+			updating		
+			unmounting
+			
+			
+			
+			class		statefull
+			functional	stateless/statefull
+			
+			16.7-->state 
+			hook
+			state
+			
+			hooks
+			
+			
+			
+		[count,seCount]	=useState(0)
+		
+		
+		npm install bootstrap --save
+		npm install --save reactstrap react react-dom
