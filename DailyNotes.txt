@@ -341,3 +341,76 @@ Component Life Cycle Methods:
 		
 		npm install bootstrap --save
 		npm install --save reactstrap react react-dom
+		
+		CDN-->index.html
+			
+			
+			Case Study:
+				1.Bank App(Boys)
+					1.Login
+					2.Logout
+					3.Account Info
+					4.transfer
+					5.Register
+
+
+
+				2.Shopping App(Girls)
+				
+					1.Login
+					2.Logout
+					3.Products info
+					4.Add ,Update ,Delete Products
+					5.Cart/Order
+					
+	useEffect:
+	===========
+		API calls
+	
+	
+AXIOS	:
+
+			JSON-SERVER
+			
+			npm install  json-server
+			
+			
+			
+			
+
+
+
+		
+			
+			
+			
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
