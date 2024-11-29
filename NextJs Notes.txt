@@ -1,0 +1,113 @@
+NextJS:
+=======
+
+Next Js is react framework for building web apps
+
+React
+
+	its not feasible to create fully-featured application  ready for production
+	
+	react is a library for building user interfaces
+	
+npm install react-router-dom --save
+	
+	as a programmer we need make decisions about other features like routing,data fetching and ..
+
+	NEXT JS
+		it uses react for building user interfaces 
+		provides additional features that enables you to create production ready apps
+		these features includes routing,optimized rendering,data fetching,compiling,bundling and more..
+		you dont need to install any additional packages as nextjs providing everything for us
+
+npm install create-next-app
+
+create-next-app projectname		-->page.tsx  -->layout
+
+npx creat-next-app name
+
+	npm run dev ->this command will setup devlopment server on localhost 3000
+
+
+
+React Server Component(RSC):new feature in react 18
+
+1.server components
+2.client components
+
+
+in next js all components are server components by default,
+which have ability to to run tasks 
+like reading files and fetching data from database
+
+but no ability to use hooks or handle user interactions
+
+
+Client components:(react components)
+==================
+
+to create client component,its necessary to add "use client" at the top component,
+which have no ability to run tasks like reading files and fetching data from database
+but have ability to use hooks or handle user interactions
+
+
+
+next js has file system based routing mechanisam
+url paths that users can access in the browsers are defined by files and folders in our codebase
+
+
+routing conventions:
+	all routes must be placed inside the app folder
+	every file that corresponds to a route must be named as page.js/page.tsx
+	every folder corresponds to a path segment in the browser URL
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

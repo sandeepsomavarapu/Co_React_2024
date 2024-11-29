@@ -336,7 +336,7 @@ Component Life Cycle Methods:
 			
 			
 			
-		[count,seCount]	=useState(0)
+		[count,setCount]	=useState(0)
 		
 		
 		npm install bootstrap --save
@@ -364,7 +364,7 @@ Component Life Cycle Methods:
 					5.Cart/Order
 					
 	useEffect:
-	===========
+	===========componentWillMount,didMount,willupdate
 		API calls
 	
 	
@@ -374,18 +374,121 @@ AXIOS	:
 			
 			npm install  json-server
 			
+	State Lifting:
+==================	
+			
+	props drilling:
+=====================
+
+		16.3
+	context api:state management library
+	
+	Form:
+	=======
+			controlled		event 
+			uncontrolled		ref 
 			
 			
+			validations
 			
+	validation libraries
+		Yup
+		formik
+		react hook form
+		final form
+		redux form
+		
+		
+		npm i react-hook-form
+			
+					200000
+			max
+			maxlength  6
+			
+	
+	
+	redux
+			
+	useState
+	useEffect
+	useContext
+	useForm
+	useCallBack
+	useMemo
+	
+	
+	rendering
+	update in state or props
+	
+	
+	Memoization:Cache
+	
+Pure Component
+==============	
+	Its return value is only determined by its input values
+
+	Its return value is always the same for the same input values
 
 
 
+	// Pure component
+export default function PureComponent({name, lastName}) {
+  return (
+    <div>My name is {name} {lastName}</div>
+  )
+}
+	
+	
+	
+	// Impure component
+export default function ImpurePureComponent({name, lastName}) {
+  return (
+    <div>My "impure" name is {name + Math.random()} {lastName + Math.random()}</div>
+  )
+}
+
+
+	
+class Test extends React.PureComponent memoization
 		
 			
-			
+			useCallBack
 			
 	
-	
+useCallback: Returns a memoized callback function
+useMemo: Returns a return value of the function
+ 
+On Dynamic import, you import the component on reaching the expression:
+
+let OtherComponent = undefined;
+// Never imported.
+if (false) {
+  OtherComponent = React.lazy(() => import('./OtherComponent.jsx'));
+}
+On Regular import, you import the component on component call:
+
+
+
+// AB.jsx
+import AB from './AB.jsx';
+
+function App() {
+  // imports A and B
+  return <AB/>
+}
+
+
+
+// AB.jsx
+import A from './A.jsx';
+import B from './B.jsx';
+
+
+
+// B is imported altought never used.
+function AB() {
+  return <A/>; 
+}	
 	
 	
 	
