@@ -1,3 +1,6 @@
+React
+
+
 NextJS:
 =======
 
@@ -61,10 +64,11 @@ routing conventions:
 	every folder corresponds to a path segment in the browser URL
 	
 
+npm i next-redux-wrapper redux react-redux redux-thunk redux-devtools-extension
 
 
-
-
+npm i @reduxjs/tookit --save
+npm i react-redux --save --force
 
 
 

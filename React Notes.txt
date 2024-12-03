@@ -958,3 +958,23 @@ client side rendering browser
 		ts
 		
 		ESLint
+
+
+browser --->client(SSG) -->time to load bundle .js --->display output
+
+server side rendering(SSR)			output server components
+
+
+TESTING  
+
+
+	JEST-->unit testing
+	
+	
+	npm i 
+	
+	
+	npm start 
+	
+	
+	npm test
